@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Connectez-vous afin de réserver une salle dans nos espaces coworking ainsi que dans nos bureaux privés.</title>
+    <title>reservation - connexion</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -18,14 +18,14 @@
 
         <div id="left">
             <div id="left-presentation">
-              <h2 class="animation a1">Bienvenue !</h2>
-              <h4 class="animation a2">Connectez-vous avec votre identifiant et votre mot de passe.</h4>
+              <h2 class="animation a1">Welcome Back</h2>
+              <h4 class="animation a2">Connectez-vous avec votre login et password</h4>
             </div>
             <form id="form" method="post" action="connexion.php">
 
-                <input class="form-field animation a3"  type="text" name="login" placeholder="Identifiant">
+                <input class="form-field animation a3"  type="text" name="login" placeholder="login">
 
-                <input class="form-field animation a4"  type="password" name="password" placeholder="Mot de Passe"><br>
+                <input class="form-field animation a4"  type="password" name="password" placeholder="password"><br>
 
                 <input id="button-connexion" class="animation a6" type="submit" value="CONNEXION" name="submit">
 

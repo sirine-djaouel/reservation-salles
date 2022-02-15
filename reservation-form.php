@@ -73,9 +73,7 @@
           header('location:planning.php');
           }
           else echo '<span class="errormessage">Veuillez remplir tous les champs</span></br>';   
-        }   
-        
-        var_dump($requete);
+        }          
       ?>
     </section>
     <?php else: ?> 

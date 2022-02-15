@@ -5,7 +5,7 @@ $connect = mysqli_connect('localhost', 'root', '','reservationsalles');
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Planning de réservation de salle</title>
+    <title>reservation - planning </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -162,5 +162,3 @@ $connect = mysqli_connect('localhost', 'root', '','reservationsalles');
     </footer>
 </body>
 </html>
-
-

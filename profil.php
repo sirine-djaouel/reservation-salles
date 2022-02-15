@@ -4,10 +4,10 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Modifiez votre profil et réserver une salle dans nos espaces coworking ainsi que dans nos bureaux privés.</title>
+    <title>reservation - profil</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -17,59 +17,26 @@ session_start();
     <main>
         <section id="container-profil">
           <div>
-          <h1> Bienvenue
+          <h1> HELLO @
             <?php
                echo $_SESSION['login'];
             ?>
           </h1>
           </div>
-        
-<?php
-$bdd = mysqli_connect("localhost","root","","reservationsalles");
-$result=mysqli_query($bdd, "SELECT * FROM reservations");
-$table=mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-var_dump($table);
-
-echo "<table border='1'>";
-echo "<tr>";
-foreach ($table[0] as $key => $val)
-    {
-        echo '<th>'. $key .'</th>';
-    }
-echo "</tr>";
-
-
-foreach ($table as $key => $val)
-    {   echo "<tr>";
-
-        foreach ($val as $key1 => $val1)
-        {
-            echo '<td>'. $val1 .'</td>';
-        }
-        
-
-        echo "</tr>";
-    }
-
-echo "</table>";
-mysqli_close($bdd);
-
-?>
-
-          <h2 id=sub-profil>Modifier vos informations de connexion</h2> 
+          
+          <h2 id=sub-profil>modifier vos informations de connexion</h2> 
             <form id="form-profil" action="profil.php" method="post">
-                <label class="champs-profil">Mot de passe actuel</label>
-                <input class="cadre-profil" type="password" id="mdp" name="password" placeholder="Mot de Passe Actuel">
+                <label class="champs-profil">password actuel</label>
+                <input class="cadre-profil" type="password" id="mdp" name="password" placeholder="mot de passe actuel">
 
-                <label class="champs-profil">Nouvel Identifiant</label>
-                <input class="cadre-profil" type="texte" id="login" name="login" placeholder="Nouvel Identifiant ou votre Identifiant actuel">
+                <label class="champs-profil">nouveau login</label>
+                <input class="cadre-profil" type="texte" id="login" name="login" placeholder="nouveau login">
 
-                <label class="champs-profil">Nouveau Mot de Passe</label>
-                <input class="cadre-profil" type="password" id="mdp" name="password" placeholder="Nouveau Mot de Passe">
+                <label class="champs-profil">nouveau password</label>
+                <input class="cadre-profil" type="password" id="mdp" name="password" placeholder="new password">
 
-                <label class="champs-profil">Confirmer votre nouveau mot de passe</label>
-                <input class="cadre-profil" type="password" id="mdp" name="password-confirm" placeholder="Confirmation de votre nouveau Mot de Passe">
+                <label class="champs-profil">confirmer le password</label>
+                <input class="cadre-profil" type="password" id="mdp" name="password-confirm" placeholder="confirmation new password">
 
                 <input id="button-profil" type="submit" value="VALIDER" name="submit">
             
@@ -93,7 +60,7 @@ mysqli_close($bdd);
                         else echo '<p class="error"> les deux champs doivent être identiques </p>';
           
                     }
-                    else echo '<p class="error">Veuillez compléter tous les champs </p>';
+                    else echo '<p class="error"> veuillez compléter tous les champs </p>';
                 }
                ?>
             </form>
