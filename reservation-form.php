@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
     <header>
-      <?php include("includes/header.php");?>
+      <?php include("header.php")?>
     </header>
     <?php if(isset($_SESSION['login'])): ?>
      
@@ -21,6 +22,8 @@
 
       <form id="formulaire" method="post" action="reservation-form.php">
         <h1 id="form-title"> RÉSERVER UN ESPACE</h1>
+        <p>Attention : Vous ne pouvez réserver que une heure à la fois.<br>
+        Merci de réserver des heures piles, exemple : 12h00 13h00.</p>
 
         <label>TITRE</label>
         <input id="input-line" type="text" name="titre" id="titre" placeholder="titre"/>
@@ -87,7 +90,7 @@
     <?php endif; ?>   
     </main>
     <footer>
-      <?php include("includes/footer.php");?>
+      <?php include("footer.php");?>
     </footer>
 </body>
 </html>
